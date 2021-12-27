@@ -33,11 +33,9 @@ public class LoginCheckFilter implements Filter {
 			chain.doFilter(request, response);
 		} else {
 			// 비 로그인 상태
-			String uri = ((HttpServletRequest)request).getContextPath();
-			((HttpServletResponse)response).sendRedirect(uri + "/member/login.do");
+			String uri = ((HttpServletRequest)request).getContextPath()+"/member/login.do";
+			((HttpServletResponse)response).sendRedirect(uri);
 		}
-		
-		chain.doFilter(request, response);
 		
 		// 사용자 요청을 처리하고 응답하기 전에 처리
 	}

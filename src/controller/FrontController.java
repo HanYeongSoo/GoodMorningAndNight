@@ -89,10 +89,6 @@ public class FrontController extends HttpServlet  {
 		}
 		
 		
-		
-		
-		
-		
 		// Command 설정
 		//commands.put("/date.do", new DateCommandImpl());
 		//commands.put("/greeting.do", new GreetingCommandImpl());
@@ -103,7 +99,7 @@ public class FrontController extends HttpServlet  {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. 사용자 요청 받기
-		doProcess(request, response);		
+		doProcess(request, response);
 	}
 
 	@Override
